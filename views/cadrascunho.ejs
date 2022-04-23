@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>  
+    
+        <main>
+        <fieldset class="cadastro">
+            <h2 id="tituloCadastro">Cadaste um novo pokemon:</h2>
+
+            <form action="/cadastro/add" method="post">
+               
+                    <fieldset>
+                        <label for="numero">Numero</label>
+                        <input type="text" id="numero" name="numero">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="tipo">Tipo</label>
+                        <input type="text" id="tipo" name="tipo" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="imagem">Imagem</label>
+                        <input type="url" id="imagem" name="imagem">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="descricao">Descrição</label>
+                        <input type="text" id="descricao" name="descricao">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="altura">Altura</label>
+                        <input type="text" id="altura" name="altura">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="peso">Peso</label>
+                        <input type="text" id="peso" name="peso">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="categoria">Categoria</label>
+                        <input type="text" id="categoria" name="categoria">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="habilidade">Habilidade</label>
+                        <input type="text" id="habilidade" name="habilidade">
+                    </fieldset>
+
+                    <button id="buttoncad" type="submit">Enviar</button>
+                
+            </form>
+        </fieldset>
+    </main>
+
+    
+    <%-include('./partials/footer.ejs')%> 
+    
+</body>
+
+
+</html>

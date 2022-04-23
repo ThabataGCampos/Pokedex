@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title> Pokedex </title>
+</head>
+
+<body>
+   <%- include('./partials/header.ejs') %> 
+   
+    <main>
+        <section class="cards">
+            <% pokedex.forEach(element => { %>
+                <a href="detalhes/<%=element.numero%>">
+                <div class="card">
+                    <div class="nomeDoPokemon"> <h3> <%=element.nome%></h3> </div>
+                    <div class="imagemDoPokemon"> <img src="<%=element.imagem%>" alt=""> </div>
+                    <div class="tipoDoPokemon"> <p> <%=element.tipo%></p> </div>
+                </div>
+                 </a>
+            <% }) %>
+        </section>
+    </main>
+
+    <footer>
+ <%- include('./partials/footer.ejs') %> 
+    </footer>
+    
+</body>
+</html>

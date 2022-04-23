@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+
+    <main>
+    <section class="detalhes">
+        <% pokemon.forEach(element => { %>
+            <div class="cardDetalhes">
+                <div class="nomeDoPokemon"> <h3> <%=element.nome%></h3> </div>
+                <div class="imagemDoPokemon"> <img src="<%=element.imagem%>" alt=""> </div>
+                <div class="tipoDoPokemon"> <p> <%=element.tipo%></p> </div>
+            </div>
+            <div class="textodetalhes">
+            <div class="nomeDoPokemon"> <h1><%=element.nome%></p> </h1>
+            <div class="numeroDoPokemon"> <p>nº: <%=element.numero%></p> </div>
+            <div class="descricaoDoPokemon"> <p>Descrição: <%=element.descrição%></p> </div>
+            <div class="alturaDoPokemon"> <p>Altura: <%=element.altura%></p> </div>
+            <div class="pesoDoPokemon"> <p>Peso: <%=element.peso%></p> </div>
+            <div class="categoriaDoPokemon"> <p>Categoria: <%=element.categoria%></p> </div>
+            <div class="habilidadeDoPokemon"> <p>Habilidade: <%=element.habilidade%></p> </div>
+        <% }) %>
+    </section>
+    </main>
+
+    <%-include('./partials/footer.ejs')%> 
+    
+
+</body>
+</html>
