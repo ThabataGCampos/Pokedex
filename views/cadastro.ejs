@@ -7,63 +7,66 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Cadastro</title>
 </head>
+
 <body>
     <%- include('./partials/header.ejs') %>  
     <main>
-        <fieldset class="cadastro">
+        <section class="cad">
+            <fieldset class="cadastro">
             <h2 id="tituloCadastro">Cadastre um novo pokemon:</h2>
 
-            <form action="/cadastro/add" method="post">
+                <form action="/cadastro/add" method="post">
                
-                    <fieldset>
+                    <fieldset class="campo">
                         <label for="numero">Numero</label>
                         <input type="text" id="numero" name="numero">
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="campo">
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" required>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="campo">
                         <label for="tipo">Tipo</label>
                         <input type="text" id="tipo" name="tipo" required>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="campo">
                         <label for="imagem">Imagem</label>
                         <input type="url" id="imagem" name="imagem">
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="campo">
                         <label for="descricao">Descrição</label>
                         <input type="text" id="descricao" name="descricao">
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="campo">
                         <label for="altura">Altura</label>
                         <input type="text" id="altura" name="altura">
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="campo">
                         <label for="peso">Peso</label>
                         <input type="text" id="peso" name="peso">
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="campo">
                         <label for="categoria">Categoria</label>
                         <input type="text" id="categoria" name="categoria">
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="campo">
                         <label for="habilidade">Habilidade</label>
                         <input type="text" id="habilidade" name="habilidade">
                     </fieldset>
 
-                    <button id="buttoncad" type="submit">Enviar</button>
+                    <button id="buttonCad" type="submit">Enviar</button>
                 
-            </form>
-        </fieldset>
+                </form>
+            </fieldset>
+        </section>
     </main>
     
     <%-include('./partials/footer.ejs')%> 

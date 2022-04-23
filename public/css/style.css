@@ -116,26 +116,34 @@ main{
     font-size: 1.2rem;
 }
 
-.cadastro{
+.cad {
     display: flex;
     justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 1rem;
-    background-color: #fff;
-   
+    background-color: #ffffffb7;
+    border-radius: 10px;
+    width: 23rem;
+    height: 28rem;
+    padding: 1rem; 
+    margin: 3rem 3rem 2rem 3rem;
 }
 
 #tituloCadastro{
     margin-left: 7%;
 }
 
-section#formulario {
-    padding: 3rem;
-}
-
 form fieldset{
     display: flex;
     flex-direction: column;
-    padding: 0.2rem;
+    padding: 0.3rem;
     border: none;
     width: 2rem;
     height: 2rem;
@@ -143,6 +151,38 @@ form fieldset{
 
 input, select, textarea, button {
     border-radius: 5px;
+}
+
+.campo input[type="text"], .campo input[type="url"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #E0E0F8;
+}
+
+#buttonCad {
+    font-size: 1.2em;
+    background: #FF0000;
+    border: 0;
+    align-items: center;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+#buttonCad:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+#buttonCad {
+    cursor: pointer;
 }
 
 footer {
