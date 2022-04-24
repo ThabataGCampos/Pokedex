@@ -34,7 +34,7 @@ let pokedex = [
         imagem: '/css/025.png',
         descrição: 'Tem a capacidade de gerar eletricidade através de suas bolsas elétricas localizadas em suas bochechas.',
         altura: '0,4 m',
-        ppeso: '6 kg',
+        peso: '6 kg',
         categoria: 'Rato',
         habilidade: 'Estática'
     },
