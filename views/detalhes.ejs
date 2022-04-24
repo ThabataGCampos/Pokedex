@@ -5,32 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Detalhes</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAJSWPANHRzgDw8O8A29vVADs7OgA6Oi4AREM3ADQ0MwBISEgA0NDIADw8MAA9PcoAQUFBAC4uewBMS0EANTUpAPPz5wDOzssALy8uANjY0gDW1tYAJCScADw8qQBBQUAA0NDNALCwrgAxMTAAMDAkAGBgYAAhIX8AtLSzACYmsgCqqqUAKiqIAL29vAAjI48A3NzWACwrIADm5t0APj0yADw7LwArK8kASUlJAEJCtgBNTEMAMzMxAB8fjwAkJKAA4+PbACkpdAAnJ7UAysrJAC8vJABAQD8A3t7eAEVENwD///QAJiaiAEVFvADp6ekAMjLbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHzQ0HwAAAAAAAAAAAAAjNDQ0NDQ0HwAAAAAAAAAZAgICAgICAgISAAAAAAAEJSUlJSUlJSUlJRQAAAAxJycnJycnJycnJycnCgAAEREREREhEBAhEREREREAADk5OTkaGDYrHRo5OTk5AAAmJiY1KRM8FQkLHCYmJgAABgYGKAcbAzcYOCgGBgYAAD09PT0WBQguDRY9PT09AAAqKioqKi8PLS8qKioqKgAADDMzMzMzMzMzMzMzMyAAAAA6MDAwMDAwMDAwMDAAAAAAAAEkJCQkJCQkJCQAAAAAAAAAFx4eHh4eHiIAAAAAAAAAAAAADjssMgAAAAAAAPw/AADwDwAA4AcAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMADAADgBwAA8A8AAPw/AAA=" rel="icon" type="image/x-icon" />
+    <title>Details</title>
 </head>
 <body>
     <%- include('./partials/header.ejs') %> 
 
     <main>
-        <section class="detalhes">
-                <div class="cardDetalhes">
-                    <h3> <%=pokemon.nome%></h3> 
-                    <img src="<%=pokemon.imagem%>" alt="">
-                    <p> <%=pokemon.tipo%></p> 
-                </div>
-                <div class="textodetalhes">
-                    <h1><%=pokemon.nome%></p> </h1>
-                    <p>nº: <%=pokemon.numero%></p> 
-                    <p>Descrição: <%=pokemon.descricao%></p> 
-                    <p>Altura: <%=pokemon.altura%></p>
-                    <p>Peso: <%=pokemon.peso%></p>
-                    <p>Categoria: <%=pokemon.categoria%></p>
-                    <p>Habilidade: <%=pokemon.habilidade%></p>
-                </div>
-        </section>
+    <section class="detalhes">
+            <div class="cardDetalhes">
+                <h3><%=pokemon.name%></h3> 
+                <img src="<%=pokemon.image%>" alt=""> 
+                <p>Type: <%=pokemon.type%></p> 
+            </div>
+            <div class="textodetalhes">
+                <h1><%=pokemon.name%></p></h1>
+                <p>nº: <%=pokemon.number%></p>
+                <p>Description: <%=pokemon.description%></p> 
+                <p>Height: <%=pokemon.height%></p>
+                <p>Weigth: <%=pokemon.weight%></p> 
+                <p>Category: <%=pokemon.category%></p>
+                <p>Abilities: <%=pokemon.abilities%></p> 
+            </div>
+    </section>
     </main>
 
     <%-include('./partials/footer.ejs')%> 
-    
+
 </body>
 </html>
-

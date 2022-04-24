@@ -5,68 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Cadastro</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAJSWPANHRzgDw8O8A29vVADs7OgA6Oi4AREM3ADQ0MwBISEgA0NDIADw8MAA9PcoAQUFBAC4uewBMS0EANTUpAPPz5wDOzssALy8uANjY0gDW1tYAJCScADw8qQBBQUAA0NDNALCwrgAxMTAAMDAkAGBgYAAhIX8AtLSzACYmsgCqqqUAKiqIAL29vAAjI48A3NzWACwrIADm5t0APj0yADw7LwArK8kASUlJAEJCtgBNTEMAMzMxAB8fjwAkJKAA4+PbACkpdAAnJ7UAysrJAC8vJABAQD8A3t7eAEVENwD///QAJiaiAEVFvADp6ekAMjLbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHzQ0HwAAAAAAAAAAAAAjNDQ0NDQ0HwAAAAAAAAAZAgICAgICAgISAAAAAAAEJSUlJSUlJSUlJRQAAAAxJycnJycnJycnJycnCgAAEREREREhEBAhEREREREAADk5OTkaGDYrHRo5OTk5AAAmJiY1KRM8FQkLHCYmJgAABgYGKAcbAzcYOCgGBgYAAD09PT0WBQguDRY9PT09AAAqKioqKi8PLS8qKioqKgAADDMzMzMzMzMzMzMzMyAAAAA6MDAwMDAwMDAwMDAAAAAAAAEkJCQkJCQkJCQAAAAAAAAAFx4eHh4eHiIAAAAAAAAAAAAADjssMgAAAAAAAPw/AADwDwAA4AcAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMADAADgBwAA8A8AAPw/AAA=" rel="icon" type="image/x-icon" />
+    <title>Register</title>
 </head>
-
 <body>
     <%- include('./partials/header.ejs') %>  
-    <main>
-        <section class="cad">
-            <fieldset class="cadastro">
-            <h2 id="tituloCadastro">Cadastre um novo pokemon:</h2>
+    <main id="mainCadastro">
+        <fieldset class="cadastro">
+            <h2 id="tituloCadastro">Register a new pokemon:</h2>
 
-                <form action="/cadastro/add" method="post">
+            <form action="/cadastro" method="post">
                
-                    <fieldset class="campo">
-                        <label for="numero">Numero</label>
-                        <input type="text" id="numero" name="numero">
+                    <fieldset>
+                        <label for="number">Number</label>
+                        <input type="text" id="number" name="number">
                     </fieldset>
 
-                    <fieldset class="campo">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" required>
+                    <fieldset>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
                     </fieldset>
 
-                    <fieldset class="campo">
-                        <label for="tipo">Tipo</label>
-                        <input type="text" id="tipo" name="tipo" required>
+                    <fieldset>
+                        <label for="type">Type</label>
+                        <input type="text" id=ype name=ype required>
                     </fieldset>
 
-                    <fieldset class="campo">
-                        <label for="imagem">Imagem</label>
-                        <input type="url" id="imagem" name="imagem">
+                    <fieldset>
+                        <label for="image">Image</label>
+                        <input type="url" id="image" name="image">
                     </fieldset>
 
-                    <fieldset class="campo">
-                        <label for="descricao">Descrição</label>
-                        <input type="text" id="descricao" name="descricao">
+                    <fieldset>
+                        <label for="description">Description</label>
+                        <input type="text" id="description" name="description">
                     </fieldset>
 
-                    <fieldset class="campo">
-                        <label for="altura">Altura</label>
-                        <input type="text" id="altura" name="altura">
+                    <fieldset>
+                        <label for="height">Height</label>
+                        <input type="text" id="height" name="height">
                     </fieldset>
 
-                    <fieldset class="campo">
-                        <label for="peso">Peso</label>
-                        <input type="text" id="peso" name="peso">
+                    <fieldset>
+                        <label for="weigth">Weigth</label>
+                        <input type="text" id="weigth" name="weigth">
                     </fieldset>
 
-                    <fieldset class="campo">
-                        <label for="categoria">Categoria</label>
-                        <input type="text" id="categoria" name="categoria">
+                    <fieldset>
+                        <label for="category">Category</label>
+                        <input type="text" id="category" name="category">
                     </fieldset>
 
-                    <fieldset class="campo">
-                        <label for="habilidade">Habilidade</label>
-                        <input type="text" id="habilidade" name="habilidade">
+                    <fieldset>
+                        <label for="abilities">Abilities</label>
+                        <input type="text" id="abilities" name="abilities">
                     </fieldset>
 
-                    <button id="buttonCad" type="submit">Enviar</button>
+                    <button id="buttonCad" type="submit">Send</button>
                 
-                </form>
-            </fieldset>
-        </section>
+            </form>
+        </fieldset>
     </main>
     
     <%-include('./partials/footer.ejs')%> 

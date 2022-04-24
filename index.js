@@ -13,66 +13,67 @@ app.use(express.json())
 const port = 3003
 
 app.listen(port, () => {
-    console.log(`Rodando na porta ${port}`)
+    console.clear();
+    console.log(`Rodando na porta http://localhost:${port}`);
 })
 
 let pokedex = [
     {   id: 1,
-        numero: '001',
-        tipo:  'Grama/Venenoso',
-        nome:  'Bulbasaur',
-        imagem: '/css/001.png',
-        descricao: 'Em suas costas há um bulbo que é cultivado a partir de uma semente plantada no seu nascimento. O bulbo também esconde duas videiras delgadas e semelhantes a tentáculos e fornece energia através da fotossíntese.',
-        altura: '0,7 m',
-        peso: '6,9 kg',
-        categoria: 'Semente',
-        habilidade: 'Supercrescimento'
+        number: '001',
+        type:  'Grass/Poison',
+        name:  'Bulbasaur',
+        image: '/css/001.png',
+        description: 'There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.',
+        heighy: '0,7 m',
+        weighy: '6,9 kg',
+        category: 'Seed',
+        abilities: 'Overgrow'
     },
-    {
-        id: 2,
-        numero: '025',
-        tipo:  'Elétrico',
-        nome:  'Pikachu',
-        imagem: '/css/025.png',
-        descricao: 'Tem a capacidade de gerar eletricidade através de suas bolsas elétricas localizadas em suas bochechas.',
-        altura: '0,4 m',
-        peso: '6 kg',
-        categoria: 'Rato',
-        habilidade: 'Estática'
+    {   id: 2,
+        number: '025',
+        type:  'Eletric',
+        name:  'Pikachu',
+        image: '/css/025.png',
+        description: 'Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.',
+        heighy: '0,4 m',
+        weighy: '6 kg',
+        category: 'Mouse',
+        abilities: 'Static'
     },
     {   id: 3,
-        numero: '175',
-        tipo:  'Fada',
-        nome:  'Togepi',
-        imagem: '/css/175.png',
-        descricao: 'É repleto de energia positiva, se for tratado com bondade, trará boa sorte ao seu treinador. É considerado como símbolo de boa sorte',
-        altura: '0,3 m',
-        peso: '1,5 kg',
-        categoria: 'Bola de Espinho',
-        habilidade: 'Empurrão e Graça Serena'
-    }
+        number: '175',
+        type:  'Fairy',
+        name:  'Togepi',
+        image: '/css/175.png',
+        description: 'The shell seems to be filled with joy. It is said that it will share good luck when treated kindly.',
+        heighy: '0,3 m',
+        weighy: '1,5 kg',
+        category: 'Spike Ball',
+        abilities: 'Serene Grace/Hustle'
+    },
 ]
 
-
-app.get('/', (req, res) => {
-res.render('index.ejs', {pokedex})
+app.get('/', (req, res) => { 
+    res.render('index.ejs', {
+        pokedex
+    })
 })
 
 app.get('/detalhes/:id', (req, res) => {
-const id = +req.params.id;
-const pokemon = pokedex.find(pokemon => pokemon.id === id);
+    const id = +req.params.id;
+    const pokemon = pokedex.find(pokemon => pokemon.id === id);
 
 res.render("detalhes", {pokemon});
-console.log(pokemon)
-    })
+})
 
 app.get('/cadastro', (req, res) => {
     res.render('cadastro.ejs')
 })
 app.post('/cadastro', (req, res) => {
-    let i = pokedex[pokedex.length-1].id + 1
-    const { numero, tipo, nome, imagem, descrição, altura, peso, categoria, habilidade } = req.body
-    pokedex.push({id: i, numero, tipo, nome, imagem, descrição, altura, peso, categoria, habilidade})
-    console.log(pokedex)
+    let i = pokedex.length+1
+    const {number, type, name, image, description, heighy, weighy, category, abilities} = req.body
+    let pokemon={id: i, number, type, name, image, description, heighy, weighy, category, abilities}
+    pokedex.push(pokemon)
     res.redirect('/')
+
 })
