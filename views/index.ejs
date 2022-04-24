@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="css/favicon.ico" rel="icon" type="image/x-icon"/>
     <title> Pokedex </title>
 </head>
 
@@ -14,9 +15,9 @@
     <main>
         <section class="cards">
             <% pokedex.forEach(element => { %>
-                <a href="detalhes/<%=element.numero%>">
+                <a href="/detalhes/<%=element.id%>">
                 <div class="card">
-                    <div class="nomeDoPokemon"> <h3> <%=element.nome%></h3> </div>
+                    <div class="nomeDoPokemon"> <h3><%=element.nome%></h3> </div>
                     <div class="imagemDoPokemon"> <img src="<%=element.imagem%>" alt=""> </div>
                     <div class="tipoDoPokemon"> <p> <%=element.tipo%></p> </div>
                 </div>

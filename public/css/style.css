@@ -89,10 +89,10 @@ main{
 }
 
 .detalhes{
-    margin-left: 10vw;
-    width: 70%;
-    height: 86vh;
+    width: 100%;
+    min-height: 86vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -100,12 +100,13 @@ main{
 }
 
 .cardDetalhes{
-    width: 20rem;
+    width: 25%;
+    min-width: 300px;
+    margin-top: 2rem;
     box-shadow: 5px 5px 5px 2px #00000080;
     background-color: #ffffffb7;
     border-radius: 10px;
     padding: 1rem;
-    margin: 0.2rem;
     font-size: 1.2rem;
     text-align: center;
     display: flex;
@@ -115,7 +116,11 @@ main{
 }
 
 .textodetalhes{
+    width: 40%;
     text-align:left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    min-width: 300px;
     padding: 0 2rem 0 2rem;
     font-size: 1.2rem;
 }

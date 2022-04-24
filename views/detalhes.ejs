@@ -12,22 +12,20 @@
 
     <main>
         <section class="detalhes">
-            <% pokemon.forEach(element => { %>
                 <div class="cardDetalhes">
-                    <div class="nomeDoPokemon"> <h3> <%=element.nome%></h3> </div>
-                    <div class="imagemDoPokemon"> <img src="<%=element.imagem%>" alt=""> </div>
-                    <div class="tipoDoPokemon"> <p> <%=element.tipo%></p> </div>
+                    <h3> <%=pokemon.nome%></h3> 
+                    <img src="<%=pokemon.imagem%>" alt="">
+                    <p> <%=pokemon.tipo%></p> 
                 </div>
                 <div class="textodetalhes">
-                    <div class="nomeDoPokemon"> <h1><%=element.nome%></p> </h1>
-                    <div class="numeroDoPokemon"> <p>nº: <%=element.numero%></p> </div>
-                    <div class="descricaoDoPokemon"> <p>Descrição: <%=element.descrição%></p> </div>
-                    <div class="alturaDoPokemon"> <p>Altura: <%=element.altura%></p> </div>
-                    <div class="pesoDoPokemon"> <p>Peso: <%=element.peso%></p> </div>
-                    <div class="categoriaDoPokemon"> <p>Categoria: <%=element.categoria%></p> </div>
-                    <div class="habilidadeDoPokemon"> <p>Habilidade: <%=element.habilidade%></p> </div>
+                    <h1><%=pokemon.nome%></p> </h1>
+                    <p>nº: <%=pokemon.numero%></p> 
+                    <p>Descrição: <%=pokemon.descricao%></p> 
+                    <p>Altura: <%=pokemon.altura%></p>
+                    <p>Peso: <%=pokemon.peso%></p>
+                    <p>Categoria: <%=pokemon.categoria%></p>
+                    <p>Habilidade: <%=pokemon.habilidade%></p>
                 </div>
-            <% }) %>
         </section>
     </main>
 
@@ -35,3 +33,4 @@
     
 </body>
 </html>
+
