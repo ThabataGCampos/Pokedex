@@ -10,12 +10,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended: true})) 
 app.use(express.json()) 
 
-const port = 3003
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, () => {
-    console.clear();
-    console.log(`Rodando na porta http://localhost:${port}`);
-})
+app.listen(PORT, () => console.log(`Server in http://localhost:${PORT}`));
 
 let pokedex = [
     {   id: 1,
