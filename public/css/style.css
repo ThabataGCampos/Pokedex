@@ -34,13 +34,13 @@ ul#menu {
 }
 
 ul#menu li{
-    padding: 0.7rem; /* Espaçamento entre os icones */
+    padding: 0.7rem; 
     font-size: 1.3rem;
 }
 
-ul#menu a{       /* Editar a cor dos links */
+ul#menu a{       
     color: #fff;
-    text-decoration: none; /*tirar o sublinhado dos links */
+    text-decoration: none; 
 }
 
 ul#menu a:hover {
